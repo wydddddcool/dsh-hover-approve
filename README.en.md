@@ -65,7 +65,15 @@ This plugin keeps the interaction **at the session's list row**: a bubble pops u
 
 ## Install
 
-In your profile (e.g. `~/.dsh/profiles/web`):
+**Quick install** (recommended):
+
+```bash
+dsh plugin --profile web add https://github.com/wydddddcool/dsh-hover-approve
+```
+
+One command installs the dependency and registers the bundle (applies `cordis.patch.yml` automatically); **restart dsh web** afterwards.
+
+You can also install manually in your profile (e.g. `~/.dsh/profiles/web`):
 
 ```sh
 # 1. Add to package.json dependencies:

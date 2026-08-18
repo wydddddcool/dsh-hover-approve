@@ -65,7 +65,15 @@ DSH 的会话经常需要你停下来处理：**授权写文件、回答一个�
 
 ## 安装
 
-在 profile（如 `~/.dsh/profiles/web`）里：
+**快速安装**（推荐）：
+
+```bash
+dsh plugin --profile web add https://github.com/wydddddcool/dsh-hover-approve
+```
+
+一条命令完成依赖安装与 bundle 注册（自动应用 `cordis.patch.yml`），**重启 dsh web** 后生效。
+
+也可以手动在 profile（如 `~/.dsh/profiles/web`）里安装：
 
 ```sh
 # 1. package.json dependencies 加：
