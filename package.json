@@ -45,5 +45,14 @@
   },
   "devDependencies": {
     "jsdom": "^30.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wydddddcool/dsh-hover-approve.git"
+  },
+  "homepage": "https://github.com/wydddddcool/dsh-hover-approve#readme",
+  "bugs": {
+    "url": "https://github.com/wydddddcool/dsh-hover-approve/issues"
+  },
+  "author": "wydddddcool"
 }
