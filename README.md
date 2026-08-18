@@ -71,7 +71,7 @@ pnpm install
 # 并在 dsh.profile.bundles 加 "dsh-hover-approve"，重启 dsh web
 ```
 
-兼容性：`peerDependencies` 显式覆盖 `@deepseek-ai/dsh-client-runtime` 的 `0.1.0-rc.x` 预发布分支（见 `|| >=0.1.0-rc.1` 分支）——`dsh plugin add` / pnpm 解析不会因预发布标签被静默排除。
+兼容性：插件通过 `ctx` 注入使用 `@deepseek-ai/dsh-client-runtime` 的客户端 API（不直接依赖任何 `@deepseek-ai` npm 包），实测兼容 **dsh 0.1.0-rc.6**。
 
 ## 测试
 
