@@ -1,0 +1,49 @@
+{
+  "name": "dsh-hover-approve",
+  "description": "DSH Web 侧边栏锚定气泡：等待授权 / 提问 / 计划确认 / 目标阻断的会话，在左侧会话行旁一键处理，无需点进会话",
+  "version": "0.2.0",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "approval",
+    "question",
+    "plan-review",
+    "hover",
+    "sidebar"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "assets",
+    "LICENSE",
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.0"
+  }
+}

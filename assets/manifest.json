@@ -1,0 +1,10 @@
+{
+  "approvalRow": "演示会话：等待授权",
+  "goalRow": "演示会话：目标已阻断",
+  "errors": [
+    "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

@@ -1,0 +1,5 @@
+# dsh-hover-approve bundle layer: applied automatically when the package is
+# installed (package.json declares dsh.bundle.patch). 挂载插件行。
+- insert:
+    - id: dsh-hover-approve
+      name: dsh-hover-approve
