@@ -513,6 +513,11 @@ test('归档会话：不弹 goal-blocked 气泡，归档后收起且不重弹', 
     h.updateList([blocked('s1', '会话I'), { id: 's2', displayTitle: '会话J', pendingInteraction: undefined }])
     await sleep(400)
     assert.equal(h.document.querySelector('[data-hover-approve-bubble]'), null, '归档会话不应因快照刷新重新弹出')
+
+    // 取消归档（归档集合移除该 id）→ 会话重新可用后应恢复弹气泡（与首次弹出相同的 350ms 延迟）
+    h.workspaces.list.update({ archivedSessionIds: [] })
+    await sleep(450)
+    assert.ok(h.document.querySelector('[data-hover-approve-bubble]'), '取消归档后气泡应重新弹出')
     h.dispose()
   } finally {
     h.dom.window.close()
