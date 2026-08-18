@@ -42,7 +42,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "node --test test.mjs"
+    "test": "node --test test.mjs",
+    "prepublishOnly": "npm test",
+    "prepack": "npm test"
   },
   "devDependencies": {
     "jsdom": "^30.0.0"
