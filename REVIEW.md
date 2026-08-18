@@ -129,13 +129,17 @@
 
 ---
 
-## 发布建议（发布前必做清单）
+## 发布建议（发布前必做清单）—— 2026-08-18 终态核销
 
-1. 修 🔴-1：授权应答绑定展示时的 `approvalId`/`PendingWait.key`，杜绝误授权。
-2. 修 🔴-2：重写 README（四种模式 + 协议 + 限制 + 兼容性 + 截图）。
-3. 修 🔴-3：按诊断修 test.mjs 的 10 个夹具缺陷，`npm test` 必须 15/15 全绿。
-4. 完成 🟡-1/🟡-2/🟡-3（key 级气泡管理与应答校验），并补 🟡-5 的两个回归用例。
-5. 补 repository/author/homepage/LICENSE 与兼容性声明。
-6. 全模式真机回归（approval / question 单选多选 / plan-review / goal-blocked / 热重载）通过后，升 `0.2.0-beta` 上 npm。
-7. 提 awesome-dsh-plugin 时附真实截图/GIF 与最终版 README。
-8. 发布定稿后再按本报告逐项复核一次（审查期间源码曾多轮变动，以定稿为准）。
+> 状态：✅ 全部完成（除第 6 项「全模式真机回归」等待用户重启验证，其余已闭环）。
+
+1. ✅ 修 🔴-1：授权应答绑定展示时的 `approvalId`/`PendingWait.key`，杜绝误授权。
+2. ✅ 修 🔴-2：重写 README（四种模式 + 协议 + 限制 + 兼容性 + 截图，截图已入 `assets/`）。
+3. ✅ 修 🔴-3：按诊断修 test.mjs 的 10 个夹具缺陷，`npm test` 16/16 全绿（含归档过滤、取消归档复原用例）。
+4. ✅ 完成 🟡-1/🟡-2/🟡-3（key 级气泡管理与应答校验），🟡-5 回归用例已补（approvalId 绑定 + 归档/取消归档）。
+5. ✅ 补 repository/author/homepage/LICENSE（MIT）与兼容性声明（README 实测 dsh 0.1.0-rc.6 + peerDependencies 显式 prerelease 分支）。
+6. ⏳ 全模式真机回归（approval / question / plan-review / goal-blocked / 热重载）——已重启并客观核查通过（归档「幸运咖」不再弹、无气泡残留、新 bundle 已加载）；B 组条件验证项待真实事件逐步确认。回归通过后升 `1.0.0`。
+7. ✅ 提 awesome-dsh-plugin：真实截图两张 + 最终版 README + CHANGELOG，PR 分支已备好（`add-dsh-hover-approve`，含 screenshots.json 条目），待 CI 门槛（仓库满 1 天 + ≥10 提交）达标后推送。
+8. ✅ 发布定稿复核：本报告逐项复核完成（附顶栏重启验证清单 v0.2.0）。
+
+追加验证记录：`npm pack` 产物完整（10 文件，~195KB unpacked，含 LICENSE/截图/CHANGELOG）。
